@@ -9,10 +9,10 @@ export function GetRecords(): AxiosPromise {
     });
 }
 
-export function SaveRecords(obj: EmployeeModel): AxiosPromise {
+export function SaveRecords(arr: Array<EmployeeModel>): AxiosPromise {
     return request({
         url: 'api/Record/SaveRecords',
         method: 'post',
-        data: obj,
+        data: arr,
     });
 }
